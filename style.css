@@ -1,0 +1,67 @@
+/**
+ * @fileoverview Main stylesheet for Shiper Teknik AC Monitoring Dashboard.
+ * Includes base resets, critical styles for light theme, and responsive adjustments.
+ */
+
+/* 1. CRITICAL BASE STYLES & ANTI-FLICKER */
+
+/* Set base background color and smooth scrolling */
+html {
+    margin: 0;
+    padding: 0;
+    /* BACKGROUND CERAH: Biru keabu-abuan muda */
+    background-color: #eef2f6; 
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+/* Base body styles: light theme background, default font, and layout constraints */
+body {
+    margin: 0;
+    padding: 0;
+    /* BACKGROUND CERAH */
+    background-color: #eef2f6;
+    /* Warna teks utama (hitam keabu-abuan) */
+    color: #1f2937; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* 2. GLOBAL RESET AND BOX-SIZING */
+
+/* Ensure consistent box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 3. ICON FONT STANDARDIZATION */
+
+/* Fix Google Material Symbols vertical alignment and default settings */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    user-select: none;
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4. RESPONSIVE OPTIMIZATIONS */
+
+/* Prevent horizontal scroll on smaller screens */
+@media (max-width: 640px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* Optimization for touch devices (disables tap highlight) */
+@media (hover: none) and (pointer: coarse) {
+    button, a {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
